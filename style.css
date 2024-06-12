@@ -1,0 +1,476 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'rubik', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*  */
+
+#header {
+    height: 52px;
+    background-color: rgb(31, 31, 31);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 40px 10px rgba(12, 12, 12, 0.5);
+    z-index: 1;
+    display: grid;
+}
+
+#nav {
+    display: flex;
+}
+
+#nav li {
+    display: inline-block;
+    position: relative;
+}
+
+#nav>li>a {
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 52px;
+    padding: 0 24px;
+    display: block;
+}
+
+#nav li:hover .subnav {
+    display: block;
+
+}
+
+#nav>li:hover>a {
+    color: rgb(45, 45, 45);
+    background-color: #70B3B5;
+    cursor: pointer;
+}
+
+#nav .subnav {
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 10px 20px 1px rgba(12, 12, 12, 0.5);
+}
+
+#nav .subnav li {
+    display: block;
+
+}
+
+#nav .subnav li a {
+    font-size: larger;
+    color: black;
+    padding: 16px;
+    transition: all 0.2s ease-in-out;
+
+}
+
+#nav .subnav li:hover a {
+    color: black;
+    background-color: #bacdcc;
+    cursor: pointer;
+}
+
+.search-button {
+    font-size: larger;
+    display: inline-block;
+    color: #ccc;
+    position: absolute;
+    right: 0;
+}
+
+.search-button .ti-search {
+    line-height: 52px;
+    color: white;
+    font-weight: bolder;
+    display: block;
+    text-decoration: none;
+    padding: 0 24px;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.search-button:hover .ti-search {
+    color: rgb(45, 45, 45);
+    background-color: #70B3B5;
+    cursor: pointer;
+}
+
+#slider {
+    position: relative;
+    margin-top: 52px;
+    padding-top: 45%;
+    background-image: linear-gradient(rgba(34, 34, 34, 0), rgba(40, 40, 40, 0.8)), url(https://nctona.github.io/StartupPage/assets/img/kogecha2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(12, 12, 12, 0.5);
+}
+
+.slider-container{
+    font-size: 48px;
+    position: absolute;
+    bottom: 0;
+    font-weight: lighter;
+    color: #fffd8d;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-slider {
+    font-size: 48px;
+    font-weight: lighter;
+    padding-bottom: 12px;
+}
+
+.description {
+    font-size: 18px;
+    bottom: 0;
+    font-weight: lighter;
+    color: #fffd8d;
+    left: 50%;
+    padding-bottom: 24px;
+}
+
+.button-slider {
+    background-color: #FFE8DB;
+    border: none;
+    border-radius: 8px;
+    color: #6D0D0D;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 32px;
+    height: 44px;
+    width: 198px;
+}
+
+.button-slider:hover{
+    cursor: pointer;
+    background-color: rgba(208, 189, 177, 0.853);
+    display: block;
+}
+
+.button-slider a{
+    display: block;
+    line-height: 44px;
+    text-decoration: none;
+    color: #6D0D0D;
+    font-weight: 600;
+}
+
+#content .courses {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    align-items: start;
+    background-image: linear-gradient(rgba(0, 44, 39, 0.7), rgba(0, 44, 39, 0.7));
+}
+
+.courses .heading-content {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-left: 64px;
+}
+
+.heading-content h1 {
+    color: #fffd8d;
+    font-weight: lighter;
+}
+
+
+.description-content {
+    padding-top: 32px;
+    color: #fffd8d;
+}
+
+.icon-courses {
+    padding-top: 32px;
+    font-size: 44px;
+    color: #fffd8d;
+}
+
+.courses .courses-content{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: grid;
+    align-items: start;
+    gap: 24px;
+}
+
+.courses .courses-description{
+    color: #fffd8d;
+    margin-right: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    background-image: linear-gradient(rgba(33, 33, 33, 0.7), rgba(33, 33, 33, 0.7));
+    transition: all 0.2s ease-in-out;
+}
+
+.courses .courses-description:hover{
+    transform: translateX(1rem);
+}
+
+@media (max-width: 900px) {
+    #content .courses {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 2fr 1fr;
+    }
+
+    .courses .heading-content {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .courses .courses-content {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin: 24px;
+    }
+}
+
+#content .classes {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(208, 205, 177, 0.855), rgba(31, 31, 31, 0.3));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.classes .heading-content {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: grid;
+    justify-items: center;
+}
+
+.classes .heading-content h1 {
+    color: rgb(31, 31, 31);
+}
+
+.classes .description-content {
+    color: rgb(31, 31, 31);
+}
+
+.classes-form {
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.classes-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 48px;
+    padding: 24px;
+    border-radius: 12px;
+    background-image: linear-gradient(rgba(33, 33, 33, 0.7), rgba(33, 33, 33, 0.7));
+}
+
+label {
+    color: #fffd8d;
+}
+
+.form-input {
+    outline: none;
+    background-color: unset;
+    border: 2px solid #fffd8d;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    padding: 16px 20vw;
+    padding-left: 12px;
+    color: #fffd8d;
+}
+
+.form-input::placeholder {
+    color: #999855;
+}
+
+.form-button {
+    background-color: #FFE8DB;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #6D0D0D;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-button:hover {
+    cursor: pointer;
+    background-color: rgba(208, 189, 177, 0.853);
+}
+
+@media (max-width: 900px) {
+
+    #content .classes {
+        grid-template-rows: 1fr 2fr;
+        grid-template-columns: 1fr;
+    }
+
+    .classes .heading-content{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .classes-form {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .classes-form form{
+        margin: 24px;
+    }
+}
+
+.contact {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 44, 39, 0.7), rgba(0, 44, 39, 0.7));
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+
+}
+
+.contact .heading-content {
+
+    padding: 64px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
+.contact .contact-content {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contact-icon {
+    font-size: 44px;
+    display: grid;
+    align-content: center;
+}
+
+.founder {
+    background-image: linear-gradient(rgba(33, 33, 33, 0.7), rgba(33, 33, 33, 0.7));
+    display: grid;
+    justify-items: center;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 8px;
+    color: #fffd8d;
+    transition: all 0.2s ease-in-out;
+}
+
+.founder:hover {
+    transform: translateY(-1rem);
+    cursor: pointer;
+}
+
+.contact-description {
+    grid-row-start: 2;
+    grid-row-end: 5;
+    padding: 8px;
+    margin-top: 24px;
+}
+
+@media (max-width: 900px) {
+    .contact .contact-content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+#footer {
+    height: 20vh;
+    display: grid;
+    color: rgba(31, 31, 31, 0.571);
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------------------------------------------------------------------------------------------- */
+
+.form-sign-in {
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 44, 39, 0.7), rgba(0, 44, 39, 0.7));
+}
+
+.sign-in-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+    border-radius: 12px;
+    background-image: linear-gradient(rgba(33, 33, 33, 0.7), rgba(33, 33, 33, 0.7));
+}
+
+.sign-in-form h1{
+    color: #fffd8d;
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    color: #fffd8d;
+}
+
+.form-input {
+    outline: none;
+    background-color: unset;
+    border: 2px solid #fffd8d;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    padding: 16px 20vw;
+    padding-left: 12px;
+    color: #fffd8d;
+}
+
+.form-input::placeholder {
+    color: #999855;
+}
+
+.form-input:focus {
+    border: 2px solid #b3ff3a;
+}
+
+.form-button {
+    background-color: #FFE8DB;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #6D0D0D;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-button:hover {
+    cursor: pointer;
+    background-color: rgba(208, 189, 177, 0.853);
+}
