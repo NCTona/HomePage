@@ -14,7 +14,7 @@ function display_form(){
         form_container.setAttribute("style", "grid-column-start: 2; grid-column-end: 3; z-index: 1; height: 100%; flex-direction: column; display: flex; justify-content: center");
         slider_title.setAttribute("style", "color: rgba(0,0,0,0)");
         slider_description.setAttribute("style", "color: rgba(0,0,0,0)");
-        slider_transition.setAttribute("style", "opacity: 0.8");
+        slider_transition.setAttribute("style", "opacity: 0.9");
         document.getElementById("button-slider").innerHTML = "";
     })
 }
