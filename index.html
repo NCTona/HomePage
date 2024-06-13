@@ -15,6 +15,29 @@
     <script>
         lucide.createIcons();
     </script>
+    <style>
+        body {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+    </style>
+    <script type=”text/JavaScript”>
+        function killCopy(e){
+            return false
+        }
+        function reEnable(){
+            return true
+        }
+        document.onselectstart=new Function (“return false”)
+            if (window.sidebar){
+            document.onmousedown=killCopy
+            document.onclick=reEnable
+        }
+        </script>
     <title>Triplingo</title>
 </head>
 
@@ -51,26 +74,26 @@ FONT SIZE SYSTEM (px)
         </div>
 
         <div id="slider">
-            <div class="slider-container">
+            <div class="slider-before"></div>
+            <div class="slider-title">
                 <h2 class="title-slider">English </h2>
                 <p class="description"><i>“Believe you can and you're halfway there.”</i></p>
-                <button class="button-slider"><a id="sign-in" >Get started</a></button>
-                
             </div>
-            <!-- <div class="form-sign-in">
-                <div class="sign-in-form">
-                    <form action="">
-                        <h1>Sign in</h1>
-                        <label for="">Username</label>
-                        <input class="form-input" type="text">
-                        <label for="">Password</label>
-                        <input class="form-input" type="text">
-                        <label for="">Type</label>
-                        <select class="form-input" disabled="disabled"></select>
-                        <button class="form-button">Sign in</button>
-                    </form>
-                </div>
-            </div> -->
+            <button class="button-slider" id="button-slider"><a id="sign-in">Get started</a></button>
+
+            <div class="sign-in-form">
+                <form action="">
+                    <h1>Sign in</h1>
+                    <label for="">Username</label>
+                    <input class="form-input" type="text">
+                    <label for="">Password</label>
+                    <input class="form-input" type="text">
+                    <label for="">Type</label>
+                    <select class="form-input" disabled="disabled"></select>
+                    <button class="form-button">Sign in</button>
+                </form>
+            </div>
+
         </div>
 
         <div id="content">
@@ -146,8 +169,8 @@ FONT SIZE SYSTEM (px)
             </div>
         </div>
     </div>
-    <script src="./config.js">
-        
-    </script>
+
 </body>
+<script src="./form_display.js"></script>
+
 </html>

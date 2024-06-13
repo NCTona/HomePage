@@ -20,7 +20,7 @@ html {
     left: 0;
     right: 0;
     box-shadow: 0px 0px 40px 10px rgba(12, 12, 12, 0.5);
-    z-index: 1;
+    z-index: 2;
     display: grid;
 }
 
@@ -111,32 +111,49 @@ html {
 }
 
 #slider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     position: relative;
     margin-top: 52px;
-    padding-top: 45%;
-    background-image: linear-gradient(rgba(34, 34, 34, 0), rgba(40, 40, 40, 0.8)), url(https://nctona.github.io/StartupPage/assets/img/kogecha2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgba(12, 12, 12, 0.5);
+    height: 95vh;
+    transition: all 1s ease-in-out;
+    background-color: rgba(255, 255, 255, 0);
 }
 
-.slider-container{
+.slider-before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(34, 34, 34, 0), rgba(40, 40, 40, 0.8)), url(https://nctona.github.io/StartupPage/assets/img/kogecha2.jpg);
+    background-size: cover;
+    z-index: -1;
+    transition: all ease-in-out 1s;
+}
+
+.slider-title{
+    width: 50%;
     font-size: 48px;
     position: absolute;
-    bottom: 0;
+    bottom: 80px;
     font-weight: lighter;
-    color: #fffd8d;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: context-menu;
 }
 
 .title-slider {
+    color: #fffd8d;
     font-size: 48px;
     font-weight: lighter;
     padding-bottom: 12px;
+    transition: all ease-in-out 0.5s;
 }
 
 .description {
@@ -146,14 +163,19 @@ html {
     color: #fffd8d;
     left: 50%;
     padding-bottom: 24px;
+    transition: all ease-in-out 0.5s;
 }
 
 .button-slider {
+    position: absolute;
+    bottom: 0;
     background-color: #FFE8DB;
     border: none;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 8px;
     color: #6D0D0D;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
     margin-bottom: 32px;
     height: 44px;
     width: 198px;
@@ -414,27 +436,27 @@ label {
 
 /* -------------------------------------------------------------------------------------------------------------- */
 
-.form-sign-in {
-    display: none;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(rgba(0, 44, 39, 0.7), rgba(0, 44, 39, 0.7));
+.sign-in-form {
+    height: 0;
+    z-index: -1;
+    position: absolute;
+    overflow: hidden;
+    transition: height ease-in-out 1s;
 }
 
 .sign-in-form form {
-    display: flex;
     flex-direction: column;
     gap: 8px;
     padding: 24px;
     border-radius: 12px;
-    background-image: linear-gradient(rgba(33, 33, 33, 0.7), rgba(33, 33, 33, 0.7));
+    background-image: linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9));
 }
 
 .sign-in-form h1{
     color: #fffd8d;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 label {
