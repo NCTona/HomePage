@@ -188,11 +188,17 @@ label {
     color: #fffd8d;
 }
 
+.alert{
+    color: rgb(195, 89, 89);
+    font-size: 80%;
+    height: 15.2px;
+    font-style: italic;
+}
+
 .form-input {
     outline: none;
     background-color: unset;
     border: 2px solid #fffd8d;
-    margin-bottom: 12px;
     border-radius: 8px;
     padding: 16px 20vw;
     padding-left: 12px;
@@ -211,6 +217,7 @@ label {
     font-weight: 600;
     color: #6D0D0D;
     transition: all 0.4s ease-in-out;
+    margin-top: 12px;
 }
 
 .form-button:hover {

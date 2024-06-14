@@ -18,4 +18,5 @@ function display_form(){
         document.getElementById("button-slider").innerHTML = "";
     })
 }
-display_form()
+
+display_form();

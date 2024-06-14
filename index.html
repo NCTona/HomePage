@@ -72,14 +72,21 @@ FONT SIZE SYSTEM (px)
             <button class="button-slider" id="button-slider"><a id="sign-in">Get started</a></button>
 
             <div class="sign-in-form">
-                <form action="">
+                <form id="form" action="">
                     <h1>Sign in</h1>
                     <label for="">Username</label>
-                    <input class="form-input" type="text">
+
+                    <div class="form-username">
+                        <input id="username" class="form-input" type="text"> <br>
+                        <div class="alert"></div>
+                    </div>
                     <label for="">Password</label>
-                    <input class="form-input" type="text">
-                    <label for="">Type</label>
-                    <select class="form-input" disabled="disabled"></select>
+
+                    <div class="form-password">
+                        <input id="password" class="form-input" type="password"> <br>
+                        <div class="alert"></div>
+                    </div>
+
                     <button class="form-button">Sign in</button>
                 </form>
             </div>
@@ -157,15 +164,15 @@ FONT SIZE SYSTEM (px)
                             description you hope others will apply to you.”</i></p>
                 </div>
                 <div class="contact-content">
-                   <div class="contact-detail">
-                    Phone: 0987654321
-                   </div>
-                   <div class="contact-detail">
-                    Email: nctona@gmail.com
-                   </div>
-                   <div class="contact-detail">
-                    Address: HaNoi, VN
-                   </div>
+                    <div class="contact-detail">
+                        Phone: 0987654321
+                    </div>
+                    <div class="contact-detail">
+                        Email: nctona@gmail.com
+                    </div>
+                    <div class="contact-detail">
+                        Address: HaNoi, VN
+                    </div>
                 </div>
             </div>
         </div>
@@ -177,8 +184,8 @@ FONT SIZE SYSTEM (px)
             </div>
         </div>
     </div>
-
+    <script src="./form_display.js"></script>
+    <script src="./validator.js"></script>
 </body>
-<script src="./form_display.js"></script>
 
 </html>
