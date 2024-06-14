@@ -186,6 +186,19 @@ FONT SIZE SYSTEM (px)
     </div>
     <script src="./form_display.js"></script>
     <script src="./validator.js"></script>
+    <script>
+        display_form();
+        Validator({
+            form: "#form",
+            rules: [
+                Validator.isUsername("#username"),
+                Validator.isPassword("#password"),
+            ],
+        });
+
+
+
+    </script>
 </body>
 
 </html>

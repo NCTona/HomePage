@@ -193,6 +193,7 @@ label {
     font-size: 80%;
     height: 15.2px;
     font-style: italic;
+    padding: 2px;
 }
 
 .form-input {
