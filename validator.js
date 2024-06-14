@@ -11,11 +11,29 @@ function Validator(options) {
             var errorElement = inputElement.parentElement.querySelector('.alert');
             var input = inputElement.parentElement.querySelector('.form-input');
             var button = document.querySelector('.form-button');
-            
+
+            button.onclick = function () {
+                options.rules.forEach(function (rule) {
+                    var inputElements = formElement.querySelector(rule.selector);
+                    var errorElements = inputElements.parentElement.querySelector('.alert');
+                    var errorMessage = rule.test(inputElements.value);
+                    var inputs = inputElements.parentElement.querySelector('.form-input');
+
+                    if (errorMessage) {
+                        errorElements.innerText = errorMessage;
+                        inputs.setAttribute("style", "border: 2px solid rgb(195, 89, 89);")
+                    } else {
+                        errorElements.innerText = " ";
+                        inputs.setAttribute("style", "border: 2px solid #fffd8d;")
+                    }
+
+                })
+            }
+
             if (inputElement) {
                 inputElement.onblur = function () {
                     var errorMessage = rule.test(inputElement.value);
-                    
+
                     if (errorMessage) {
                         errorElement.innerText = errorMessage;
                         input.setAttribute("style", "border: 2px solid rgb(195, 89, 89);")
@@ -28,17 +46,7 @@ function Validator(options) {
                     errorElement.innerText = " ";
                     input.setAttribute("style", "border: 2px solid #b3ff3a;")
                 }
-                button.onclick = function () {
-                    var errorMessage = rule.test(inputElement.value);
 
-                    if (errorMessage) {
-                        errorElement.innerText = errorMessage;
-                        input.setAttribute("style", "border: 2px solid rgb(195, 89, 89);")
-                    } else {
-                        errorElement.innerText = " ";
-                        input.setAttribute("style", "border: 2px solid #fffd8d;")
-                    }
-                }
             }
         })
 
