@@ -11,11 +11,11 @@ function display_form(){
         slider.setAttribute("style", "justify-items: center; align-items: center;")
         button.setAttribute("style", "height: 0px;");
         form.setAttribute("style", "display: flex; overflow: visible");
-        form_container.setAttribute("style", "grid-column-start: 2; grid-column-end: 3; z-index: 1; height: 100%; flex-direction: column; display: flex; justify-content: center");
+        form_container.setAttribute("style", "z-index: 1; height: 100%; flex-direction: column; display: flex; justify-content: center");
         slider_title.setAttribute("style", "color: rgba(0,0,0,0)");
         slider_description.setAttribute("style", "color: rgba(0,0,0,0)");
         slider_transition.setAttribute("style", "opacity: 0.9");
-        document.getElementById("button-slider").innerHTML = "";
+        document.getElementById("button-slider").innerText = "";
     })
 }
 

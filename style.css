@@ -195,6 +195,8 @@ html {
     position: absolute;
     overflow: hidden;
     transition: height ease-in-out 1s;
+    grid-column-start: 2;
+    grid-column-end: 3; 
 }
 
 .sign-in-form form {
@@ -254,7 +256,15 @@ label {
     background-color: rgba(208, 189, 177, 0.853);
 }
 
-#content .courses {
+@media (max-width: 800px){
+
+    .sign-in-form{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+.courses {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 0.8fr 2fr 2fr;
